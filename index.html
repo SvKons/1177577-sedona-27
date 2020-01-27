@@ -5,8 +5,71 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+  	<header>
+  		<div>
+  			<img src="/" alt="City of Sedona">
+  		</div>
+  			<nav>
+  				<ul>
+  					<li><a href="/">Информация</a></li>
+  					<li><a href="/">Фото и видео</a></li>
+  					<li><a href="/">Карта штата</a></li>
+  					<li><a href="catalog.html">Гостиницы</a></li> 
+  				</ul>
+  			</nav>
+  	</header>
+  	<main>
+  		<section> <!--Почему когда заголовки находятся в секции, то их размер визуально становится меньше? Как тут правильно прописывать? Через H и P? Или все заголовки? -->
+  			<h2 class="/">Welcome</h2>
+  			<p class="/">to the gorgeous</p>
+  			<h1 class="/">Sedona</h1>
+  			<p class="/">"Because the Grand Canyon sucks!"</p>
+  		</section>
 
-   
+  		<section>
+  			<p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p> <!--Текст в верхнем регистре будет прописывать в CSS?--> 
+  			<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+  		</section>
 
+  		<!--Здесь будут причины-->
+
+  		<section>
+  			<h2>Заинтересовались?</h2>
+  			<p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+  			<!--Формы создаются как-то наподобие того, что я нагородила? :)-->
+  			<form>
+  				<p>Поиск гостницы в Седоне</p>
+  					<p>
+  						<label for="Chek_in">Даты заезда:</label>
+  						<input type="date" id="date" name="date">
+  					</p>
+  					<p>
+  						<label for="Chek_out">Даты выезда:</label>
+  						<input type="date" id="date" name="date">
+  					</p>
+  					<p>
+  						<label for="Adults">Взрослые:</label>  	<!--Не знаю как такие кнопки с + и - создавать-->					
+  					</p>
+  					<p>
+  						<label for="Children">Дети:</label>  						
+  					</p>
+  					<p>
+              		  	<button type="search">Найти</button>
+            		</p>
+  			</form>
+  		</section>
+  	</main>
+  		<footer class="/">
+      <section>
+      #ViSITSEDONA     
+      </section>
+      <section>
+      	<a href="/"><img src="http://placehold.it/50x50" alt="Twitter"></a>
+      	<a href="/"><img src="http://placehold.it/50x50" alt="Twitter"></a>
+      	<a href="/"><img src="http://placehold.it/50x50" alt="Twitter"></a>
+      </section>
+      <section><img src="img/website.jpg"></a> <!--Заскринила с экрана логотип :) -->
+      </section>
+    </footer>
   </body>
 </html>
