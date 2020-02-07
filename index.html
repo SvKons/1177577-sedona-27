@@ -3,29 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" type="text/css" href="css/style_index.css">
   </head>
   <body>
   	<header>
-  		<a>
+  		<a href="./index.html">
   			<img src="img/logo-sedona.svg" width="200" alt="City of Sedona">
   		</a>
   			<nav>
-  				<ul>
+  				<ul class="site-navigation">
   					<li><a href="/">Информация</a></li>
   					<li><a href="/">Фото и видео</a></li>
   					<li><a href="/">Карта штата</a></li>
-  					<li><a href="/">Гостиницы</a></li> 
+  					<li><a href="./catalog.html">Гостиницы</a></li> 
   				</ul>
   			</nav>
   	</header>
-  	<main>
-  		<section> <!--Почему когда заголовки находятся в секции, то их размер визуально становится меньше? Как тут правильно прописывать? Через H и P? Или все заголовки? -->
-  			<h2 class="first_line">Welcome</h2>
-  			<p class="second_line">to the gorgeous</p>
-  			<h1 class="third_line">Sedona</h1>
-  			<p class="fourth_line">"Because the Grand Canyon sucks!"</p>
-  		</section>
-
+  	<main class="container">
+  		<div  class="fig">
+  			<img src="img/intro-welcome.svg" width="400" alt="Welcome to Sedona">
+  		</div>
   		<section>
   			<p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p> <!--Текст в верхнем регистре будет прописывать в CSS?--> 
   			<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -36,27 +33,18 @@
   		<section>
   			<h2>Заинтересовались?</h2>
   			<p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-  			<!--Формы создаются как-то наподобие того, что я нагородила? :)-->
-  			<form>
-  				<p>Поиск гостницы в Седоне</p>
-  					<p>
-  						<label for="Chek_in">Даты заезда:</label>
-  						<input type="date" id="" name="">
-  					</p>
-  					<p>
-  						<label for="Chek_out">Даты выезда:</label>
-  						<input type="date" id="" name="">
-  					</p>
-  					<p>
-  						<label for="Adults">Взрослые:</label>  	<!--Не знаю как такие кнопки с + и - создавать-->					
-  					</p>
-  					<p>
-  						<label for="Children">Дети:</label>  						
-  					</p>
-  					<p>
-              		  	<button type="search">Найти</button>
-            		</p>
-  			</form>
+  			<p>Поиск гостницы в Седоне</p>
+  				<div>
+  					<p>Даты заезда:</p>
+  					   <input type="hidden" name="" value="15.04.2020">
+
+  					<p>Даты выезда:</p>
+               			<input type="hidden" name="" value="25.04.2020"> 
+
+  					<p>Взрослые:</p>				
+  					<p>Дети:</p>
+              		<p><button type="sibmit" name="search">Найти</button></p>            		
+  			</div>
   		</section>
   	</main>
   	<footer class="footer">
@@ -68,7 +56,7 @@
       	<a href="/"><img src="http://placehold.it/50x50" alt="Twitter"></a>
       	<a href="/"><img src="http://placehold.it/50x50" alt="Twitter"></a>
       </div>
-      <div><img src="img/website.jpg"></a> <!--Заскринила с экрана логотип :) -->
+      <div><img src="img/logo-htmlacademy.svg" width="200"></a>
       </div>
     </footer>
   </body>
