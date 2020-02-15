@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style_index.css">
   </head>
   <body>
-  	<header>
-  		<a href="./index.html">
-  			<img src="img/logo-sedona.svg" width="200" alt="city of Sedona">
-  		</a>
-  			<nav>
-  				<ul class="site-navigation">
-  					<li><a href="/">Информация</a></li>
-            <li><a href="/">Фото и видео</a></li>
-            <li><a href="/">Карта штата</a></li>
-  					<li><a href="/">Гостиницы</a></li> 
-  				</ul>
-  			</nav>
-  	</header>
+    <div class="white-back">
+      <nav class="main-navigation">
+      <div class="logo-of-sedona">
+        <a href="./index.html">
+        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип города Седона">
+        </a>
+      </div>
+      <ul class="site-navigation">
+         <li class="nav-back info"><a href="/">Информация</a></li>
+         <li class="nav-back gallery"><a href="/">Фото и видео</a></li>
+         <li class="nav-back map"><a href="/">Карта штата</a></li>
+         <li class="nav-back hotels"><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  	 </header>
+    
+
   	<main>
       <section>
         <ul>
@@ -28,8 +34,8 @@
               <p>Гостиница</p>
               <p>От 4000 Р.</p>
                 <a class="button" href="#">Подробнее</a>
-                <a class="button" href="#">Забронировать</a> <!--Кнопки будут вести на разные страницы, классы тоже нужно разные указывать?-->
-          <!-- Здесь будут звезды-->
+                <a class="button" href="#">Забронировать</a> 
+                          <!-- Здесь будут звезды-->
               <p>Рейтинг: 8,5</p>
           </li>
           <li>
@@ -55,19 +61,24 @@
         </ul>
       </section>
   	</main>
-  		<footer class="footer"> 
-      <div>
-      #VISITSEDONA <br>
-      +7(495)666-02-06    
+  		<footer class="footer-main">
+      <div class="footer-contacts">
+        <p class="first-tag">#VISITSEDONA</p> 
+        <p class="phone-number">+7(495)666-02-06</p>
       </div>
-      <div>
-      	<a href="/"><img src="http://placehold.it/50x50" alt="twitter"></a>
-      	<a href="/"><img src="http://placehold.it/50x50" alt="facebook"></a>
-      	<a href="/"><img src="http://placehold.it/50x50" alt="youtube"></a>
+      <div class="footer-social">
+        <a href="/"><img src="http://placehold.it/50x50" alt="twitter"></a>
+        <a href="/"><img src="http://placehold.it/50x50" alt="facebook"></a>
+        <a href="/"><img src="http://placehold.it/50x50" alt="youtube"></a>
       </div>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" width="200">
-      </a>
+
+      <div class="footer-logo">
+        <p class="footer-web-by">Website by</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/logo-htmlacademy.svg" width="200" alt="Логотип HTML Academy" class="footer-logo-html">
+        </a>
+     </div>
     </footer>
+    </div>
   </body>
 </html>
