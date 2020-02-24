@@ -7,6 +7,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
+
  }
 
 a {
@@ -20,31 +21,35 @@ a {
   position: relative;
   margin-left: auto; 
   margin-right: auto;
-	height: auto;
+	height: 100%; 
 	box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
+
+.grey-back-index {
+  width: auto;
+  height: 2780px;
+  background-color: #f2f2f2;
+}
+
+.grey-back-catalog {
+  width: auto;
+  height: 933px;
+  background-color: #f2f2f2;
+}
+
  .page-header {
 	background-image: url("../img/background3.jpg");
+  background-position-y: -36px;
 	background-repeat: no-repeat;
   background-size: 100% auto;
-}
-
-.nav-back {
-	background-image: url("../img/white1.png");
-	width: 239px;
-} 
-
-.info,
-.gallery {
-	text-align: left;
-}
-
-.map,
-.hotels {
-	text-align: right;
+  padding-bottom: 76px;
 }
 
 .main-navigation {
+  background-image: url("../img/white1.png");
+  width: 1200px;
+  height: 56px;
+  position: absolute;
   font-size: 14px;
   line-height: 26px;
   color: #ffffff;
@@ -52,15 +57,26 @@ a {
 } 
 
 .site-navigation {
-  margin: 0px;
-  display: flex;
- 	justify-content: space-around; 
-  list-style: none;
-  color: #ffffff;
-  width: auto; 
-  padding: 16px; 
-} 
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 56px;
+	padding: 0 72px;
+	margin: 0;
+	list-style: none;
+}
 
+.site-navigation li {
+	display: flex;
+	justify-content: flex-start;
+	flex-basis: 25%;
+	box-sizing: border-box;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+	justify-content: flex-end;
+}
 
 .site-navigation a:hover {
 	color: #81b3d2;
@@ -70,10 +86,8 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.menu {
-  min-height: 50px;
-  padding-top: 20px;
-  text-align: center;
+.site-navigation .active a {
+  color: #766357;
 }
 
 .logo-of-sedona {
@@ -91,14 +105,22 @@ a {
   padding-top: 100px;
 }
 
-.polygon {
-	margin-bottom: -9px;
-	align-content: center;
-  width: 1203px;
-  height: 59px;
-  object-fit: contain;
+.welcome-to-Sedona::after {
+  content: url(../img/polygon-1.png);
+  position: absolute;
+  left: -1px;
+  top: 479px;
 }
 
+.page-index {
+  background-image: url("../img/white1.png");
+  width: auto;
+  height: auto;
+
+}
+/*По макету в Зеплине ширина этого полигона 1203 и если там приближать, то края слегка выходять за границу. Пришлось сделать -1px влево. 
+По-другому к краю не прилипает, оставаляет маленький зазор с левой стороны. Фигня с центровванием.
+А еще общая ширина макета 1200. Что делать?*/ 
 .recommendation-item {
   width: 300px;
   text-align: center;
@@ -106,7 +128,7 @@ a {
 
 .recommendation h3 {
 	font-size: 21px;
-	line-height: 1;
+	line-height: 1.24;
 }
 
 .recommendation-list {
@@ -140,22 +162,14 @@ a {
 
 .description-title-1 {
 		width: 440px;
-  	height: 48px;
-  	display: flex;
-  	align-items: center;
-  	padding-left: 380px;
-  	padding-top: 61px; 
+  	margin: 0 auto;
+    padding-top: 61px; 
   }
 
 .description-title-2 {
 	width: 489px;
-  height: 13px;
-  display: flex;
-  align-items: center;
-  padding-left: 355px;
-  padding-right: 356px;
-  padding-bottom: 56px; 
-  padding-top: 35px; 
+  margin: 0 auto;
+  padding-top: 38px;
 }
 
 .reason-item-1 {
@@ -244,66 +258,545 @@ a {
   text-align: center;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.filter-form {
+  background-image: url("../img/filter-background.jpg");
+  background-position-y: -80px; 
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  width: 1200px;
+  height: 217px;
 }
 
-.footer-main {
-	margin: 0;
+.page-hotels {
+  padding-top: 60px;
+  background-image: url("../img/white1.png");
+  width: 1200px;
+  height: 758px;
+}
+
+fieldset {
+  border: none;
   padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 31px;
+}
+
+.form-fieldset-1 label {
+  line-height: 36px;
+}
+
+.form-fieldset-2 label {
+  line-height: 36px;
+}
+
+.form-fieldset-1 {
+  display: flex;
+  text-align: left;
+  float: left;
+  margin-left: 72px;
+  margin-top: 31px;
+}
+
+.form-fieldset-2 {
+  display: flex;
+  text-align: left;
+  float: left;
+  margin-left: 115px;
+  margin-top: 31px;
+}
+
+.filter-range {
+  width: 330px;
+  margin-top: 31px;
+  margin-left: 811px;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+  
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  margin-right: 17px;
+  line-height: 280%;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  margin-right: 17px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  opacity: 0.3
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hotels-sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  list-style: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  height: 86px;
+}
+
+/*.hotels-sort li:nth-child(6) {
+  justify-content: flex-end;
+} 
+
+Не хочет сдвигать вправо */
+
+
+
+.hotel-sort-item-1 {
+  height: 25px;
+  font-size: 21px;
+  line-height: 1.24;
+  font-weight: bold;
+  margin-left: 72px;
+  padding-top: 31px;
+}
+
+.hotel-sort-item-2 {
+  font-size: 12px;
+  height: 15px;
+  line-height: 1.5;
+  margin-left: 49px;
+  padding-top: 38px;
+}
+
+.hotel-sort-item-3 {
+  font-size: 12px;
+  height: 15px;
+  line-height: 1.5;
+  margin-left: 40px;
+  padding-top: 38px;
+}
+
+.hotel-sort-item-4,
+.hotel-sort-item-5 {
+  font-size: 12px;
+  height: 15px;
+  line-height: 1.5;
+  margin-left: 33px;
+  padding-top: 38px;
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+
+.hotels-list {
+  width: 1200px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel-item {
+  list-style: none;
+}
+
+.link-title h3 {
+  height: 21px;
+  font-weight: bold;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.hotels-sort .hotel-sort-item-4 a,
+.hotels-sort .hotel-sort-item-5 a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotels-sort .hotel-sort-item-4 a:hover,
+.hotels-sort .hotel-sort-item-5 a:hover {
+  color: #81b3d2;
+}
+
+.hotels-sort .hotel-sort-item-4 a:active,
+.hotels-sort .hotel-sort-item-5 a:active {
+  color: #000000;
+}
+
+.hotels-sort .active a {
+  color: #81b3d2;
+}
+
+.hotel-sort-icon-up path {
+  fill: #cacaca;
+}
+
+.hotel-sort-icon-up:hover path {
+  fill: #000000;
+}
+
+.hotel-sort-icon-up:active path {
+  fill: #81b3d2;
+}
+
+.hotel-sort-icon-down path {
+  fill: #81b3d2;
+}
+.hotels-list ul {
+  padding: 0;
+  margin: 0;
+  margin-left: 72px;
+}
+
+.hotel-image {
+  float: left;
+}
+
+.hotel-description {
+  width: 710px;
+
+  float: right;
+  padding-left: 30px;
+}
+
+.list-title-1 {
+  width: 210px;
+  height: 16px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.list-title-2 {
+  width: 170px;
+  height: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.list-title-3 {
+  width: 227px;
+  height: 16px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.hotel-price {
+  float: left; /*Почему у меня в этом шаге цена не переезжает на строку рядом с .hotel-type?*/
+}
+
+.hotel-button-blue {
+  min-height: 27px;
+  color: #ffffff;
+  background-color: #81b3d2;
+  margin-top: 14px;
+  margin-right: 6px;
+  padding: 5px 17px;
+  font-weight: bold;
+}
+
+.hotel-button-brown {
+  min-height: 27px;
+  color: #ffffff;
+  background-color: #766357;
+  margin-top: 14px;
+  padding: 5px 17px;
+  font-weight: bold;
+}
+
+.hotel-button-blue:hover {
+  background-color: #669ec0;
+}
+
+.hotel-button-blue:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-button-brown:hover {
+  background-color: #604e43;
+}
+
+.hotel-button-brown:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-rating {
+  background-image: url("../img/rating-back.jpg");
+  width: 90px;
+  color: #666666;
+  text-align: center;
+}
+
+/*Добавляла просто фон, тоже лажа какая-то получается.*/
+
+.visually-hidden {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+.footer-map{
+  position: absolute;
+  height: 593px;
+  margin: 0;
+  margin-top: -13px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-	list-style: none;
+  align-items: center;
+  position: relative;
+  height: 120px;
+  top: 473px;
 }
 
 .first-tag {
 	width: 136px;
   height: 16px;
   font-size: 21px;
+  margin: 0;
   font-weight: bold;
   line-height: 1.24;
 }
 
 .phone-number {
-	width: 223px;
   height: 20px;
   font-size: 21px;
   font-weight: bold;
+  margin: 0;
+  padding-top: 16px;
   line-height: 1.24;
 }
 
+.footer-social ul {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 151px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.social-button {
+  display: flex;
+	width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  list-style: none;
+}
+
 .footer-web-by {
-	width: 74px;
+  margin: 0;
+  margin-right: 8px;
+  padding-top: 8px;
+  width: 74px;
   height: 11px;
   font-size: 14px;
-  line-height: 1.86;
+  
   float: left;
-  margin-right: 8px;
 }
 
-.footer-social {
-	display: flex;
+a.social-button-twitter {
+  padding-left: 15px;
+  padding-top: 14px;
+}
+
+a.social-button-facebook {
+  padding-left: 17px;
+  padding-top: 13px;
+}
+
+a.social-button-youtube {
+  padding-left: 13px;
+  padding-top: 16px;
+}
+
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button a:active {
+  opacity: 0.3;
+}
+
+.footer-logo-academy:hover path {
+  fill: #81b3d2;
+} /*C svg не работало, только на path реагирует*/
+
+.footer-logo-academy:active path {
+  fill: #bdbbbc;
+}
+
+.footer-catalog {
+  background-color: #ffffff;
+  display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-	list-style: none;
-}
-
-.twitter-back {
-	background-image: url("../img/social-back.jpg");
-	width: 46px;
-  height: 48px;
-  display: block;
-}
-
-.fb-back {
-	background-image: url("../img/social-back.jpg");
-	width: 46px;
-  height: 48px;
-}
-
-.yt-back {
-	background-image: url("../img/social-back.jpg");
-	width: 46px;
-  height: 48px;
+  align-items: center;
+  position: relative;
+  height: 116px;
 }
