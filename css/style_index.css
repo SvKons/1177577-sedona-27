@@ -77,10 +77,6 @@ li {
   color: black;
 }
 
-.site-navigation .active {
-  color:#818181;
-}
-
 .site-navigation li:first-child{
   text-align: left;
 }
@@ -97,16 +93,16 @@ li {
  text-align: right;
 }
 
+.site-navigation .active a {
+  color: #766357;
+}
+
 .site-navigation a:hover {
 	color: #81b3d2;
 }
 
 .site-navigation a:active {
 	color: rgba(0, 0, 0, 0.3);
-}
-
-.site-navigation .active a {
-  color: #766357;
 }
 
 .welcome-to-Sedona {
@@ -130,7 +126,8 @@ li {
   content: url(../img/polygon-1.png);
   position: absolute;
   left: 158px;
-  top: 506px;
+  top: 511px;
+  height: 59px;
 }
 
 .page-index {
@@ -191,19 +188,17 @@ li {
 }
 
 .reason-item-1 {
-	background-image: url("../img/reason-1-blue.jpg");
-	width: 400px;
-  height: 256px;
-  float: left;
+	display: flex;
+  flex-direction: row-reverse;
+	width: 100%;
 }
 
 .reason-1 {
-	width: 280px;
-  height: 146px;
+  background-image: url("../img/reason-1-blue.jpg");
+	width: 100%;
 	text-align: center;
 	color: #ffffff;
-  padding-left: 60px;
-  padding-top: 30px;
+  padding: 46px 60px 64px 60px;
 }
 
 .reason-title-1 {
@@ -211,6 +206,7 @@ li {
   font-weight: bold;
   line-height: 21px;
   padding: 0 70px;
+  margin: 0;
 }
 
 .reason-title-about,
@@ -220,6 +216,10 @@ li {
   line-height: 21px;
 }
 
+.reason-title-about {
+  margin: 0;
+}
+
 .recommendation-reason {
   font-size: 14px;
   font-weight: normal;
@@ -227,25 +227,23 @@ li {
 }
 
 .reason-item-2 {
-	background-image: url("../img/reason-1-blue.jpg");
-	width: 400px;
-  height: 256px;
-  float: right;
+  display: flex;
+  flex-direction: row;
+	width: 100%;
 }
 
 .reason-2 {
-	width: 303px;
-  height: 142px;
+  background-image: url("../img/reason-1-blue.jpg");
+	width: 100%;
 	text-align: center;
 	color: #ffffff;
-	padding-left: 49px;
-	padding-top: 35px;
+	padding: 49px 49px 65px 48px;
 }
 
 .reason-title-2 {
   font-size: 21px;
   padding: 0 70px;
-  margin-top: 8px;
+  margin: 0;
 }
 
 .index-columns-2 {
@@ -261,6 +259,7 @@ li {
 }
 
 .reasons-list {
+  width: 100%;
 	margin: 0;
   padding: 0;
   display: flex;
@@ -421,6 +420,15 @@ li {
   margin-bottom: 29px;
 }
 
+.modal .modal-form input[type="text"]::placeholder {
+  color: #000000;
+}
+
+.modal .modal-form input::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 .modal .modal-form .label {
   min-width: 119px;
   min-height: 26px;
@@ -550,6 +558,8 @@ li {
   background-position-y: -60px;
   background-repeat: no-repeat;
   color: #ffffff;
+  display: flex;
+  flex-direction: row;
   text-transform: uppercase;
 
   width: 1200px;
@@ -583,17 +593,17 @@ legend {
 
 .form-fieldset-1 {
   display: flex;
+  flex-direction: column;
   text-align: left;
-  float: left;
   margin-left: 72px;
   margin-top: 23px;
 }
 
 .form-fieldset-2 {
   display: flex;
+  flex-direction: column;
   text-align: left;
-  float: left;
-  padding-left: 120px;
+  margin-left: 125px;
   margin-top: 23px;
 }
 
@@ -604,22 +614,22 @@ legend {
 }
 
 .filter-range {
-  width: 315px;
+  width: 314px;
   height: 158px;
   margin-top: 27px;
-  padding-left: 352px;
+  margin-left: 355px;
 
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+  margin-bottom: 13px;
 
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
-  height: 0;
+  height: 16px;
 }
 
 .price-controls {
@@ -665,6 +675,7 @@ legend {
   font: inherit;
   background: none;
   border: none;
+  -moz-appearance: textfield;
 }
 
 .range-controls {
@@ -696,7 +707,7 @@ legend {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+   transform: scale(1.1);
 }
 
 .range-toggle-min {
@@ -731,7 +742,7 @@ legend {
 input[type="checkbox"] + label::before {
   content: "";
   display: inline-block;
-  width: 23px;
+  width: 27px;
   height: 23px;
   vertical-align: middle;
   margin-right: 17px;
@@ -744,7 +755,7 @@ input[type="checkbox"] + label::before {
 input[type="checkbox"]:checked + label::before {
   content: "";
   display: inline-block;
-  width: 23px;
+  width: 27px;
   height: 23px;
   vertical-align: middle;
   margin-right: 17px;
@@ -781,7 +792,7 @@ input[type="checkbox"] {
   align-items: center;
   margin-left: 50px;
   width: 100%;
-  vertical-align: middle;
+  
 }
 
 
@@ -890,8 +901,10 @@ input[type="checkbox"] {
 .hotel-item-3 {
   border-bottom: 1px solid #f2f2f2;
   padding: 25px 72px;
-  width: 1056px;
+  width: 100%;
   height: 102px;
+  display: flex;
+  flex-direction: row;
 }
 
 .hotel-top {
@@ -899,34 +912,33 @@ input[type="checkbox"] {
   justify-content: space-between;
 }
 
-.hotel-image {
-  float: left;
-}
-
 .hotel-info {
   width: 177px;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .hotel-bottom {
-  padding-top: 10px;
+  padding-top: 9px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hotel-content {
-  width: auto;
+  width: 100%;
   height: 150px;
-  float: right;
   padding-left: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-title {
   margin: 0;
-  width: 227px;
-  height: 20px;
+  width: auto;
+  height: auto;
   font-size: 21px;
   font-weight: bold;
   line-height: 1.24;
@@ -943,30 +955,28 @@ input[type="checkbox"] {
 }
 
 .hotel-raiting {
-  min-height: 27px;
+  height: 27px;
   color: #666666;
   background-color: #f2f2f2;
-  padding: 5px 17px;
-  margin-left: 504px;
+  padding: 0 17px;
 }
 
 .hotel-more {
-  min-height: 27px;
+  height: 27px;
   color: #ffffff;
   background-color: #81b3d2;
-  margin-top: 14px;
   margin-right: 6px;
-  padding: 5px 17px;
+  padding: 0 17px;
   font-weight: bold;
 }
 
 .hotel-booking {
-  min-height: 27px;
+  height: 27px;
   color: #ffffff;
   background-color: #766357;
-  margin-top: 14px;
-  padding: 5px 17px;
+  padding: 0 17px;
   font-weight: bold;
+  margin-right: auto;
 }
 
 .hotel-more:hover {
@@ -1032,6 +1042,7 @@ input[type="checkbox"] {
   margin: 0;
   padding: 0;
   height: 0;
+  width: 0;
 }
 
 .modal .footer-map {
