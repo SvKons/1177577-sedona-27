@@ -937,41 +937,6 @@ legend {
   fill: #6a6a6a;
 }
 
-
-/*.checkbox[type="checkbox"] + label::before {
-  content: "";
-  display: inline-block;
-  width: 27px;
-  height: 23px;
-  vertical-align: middle;
-  line-height: 280%;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-
-  margin-right: 13px;
-}
-
-.checkbox-checked[type="checkbox"]:checked + label::before {
-  content: "";
-  display: inline-block;
-  width: 27px;
-  height: 23px;
-  vertical-align: middle;
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-
-  margin-right: 13px;
-}
-
-.checkbox[type="checkbox"]:disabled + label::before {
-  opacity: 0.3
-}
-
-.checkbox[type="checkbox"],
-.checkbox-checked[type="checkbox"] {
-  display: none;
-}*/
-
 .sort{
   display: flex;
   align-items: center;
@@ -1164,7 +1129,7 @@ legend {
   width: auto;
   height: auto;
   font-size: 21px;
-  font-weight: 800;
+  font-weight: bold;
   line-height: 26px;
   letter-spacing: 0.3px;
   text-align: left;
