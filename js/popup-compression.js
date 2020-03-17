@@ -1,0 +1,1 @@
+var button=document.querySelector(".modal-btn");var popup=document.querySelector(".form-show");button.addEventListener("click",function(a){a.preventDefault();popup.classList.add("modal-show")});button.addEventListener("click",function(a){a.preventDefault();popup.classList.toggle("modal-close")});

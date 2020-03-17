@@ -20,7 +20,7 @@
          <li class="nav-back info"><a href="/">Информация</a></li>
          <li class="nav-back gallery"><a href="/">Фото и видео</a></li>
          <li class="nav-back map"><a href="/">Карта штата</a></li>
-         <li class="nav-back hotels active"><a href="catalog.html">Гостиницы</a></li>
+         <li class="nav-back hotels active-nav"><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
     </div>
@@ -30,7 +30,7 @@
       <section class="filter-form">
 
       <h2 class="visually-hidden">Фильтр отелей</h2>
-
+        <form>
         <fieldset class="form-fieldset-1">
           <legend class="infrastruk">Инфраструктура:</legend>
 
@@ -73,7 +73,9 @@
             Wi-Fi
           </label>
         </fieldset>
+        </form>
 
+        <form>
         <fieldset class="form-fieldset-2">
           <legend class="house-type">Тип жилья:</legend>
           <label class="check-house" for="hotel">
@@ -115,6 +117,7 @@
             Апартаменты
           </label>
         </fieldset>
+        </form>
 
         <fieldset class="filter-range">
           <legend class="filter-range-title">Стоимость в сутки (р):</legend>
@@ -126,8 +129,8 @@
             <div class="scale">
               <div class="bar"></div>
           </div>
-            <div class="range-toggle range-toggle-min"></div>
-            <div class="range-toggle range-toggle-max"></div>
+            <button class="range-toggle range-toggle-min"></button>
+            <button class="range-toggle range-toggle-max"></button>
           </div>
             <button class="btn-transparent" type="submit">Показать</button>
         </fieldset>
@@ -155,11 +158,11 @@
   	<h2 class="visually-hidden">Список отелей</h2>
 
     <ul class="hotel-list">
-      <li class="hotel-item-1">
+      <li class="hotel-item">
         <div class="hotel-img">
           <img src="img/amara.jpg" width="135" height="90" class="hotel-image" alt="Amara Resort & Spa">
         </div>
-          <div class="hotel-content hotel-content-1">
+          <div class="hotel-content">
             <div class="hotel-top">
               <h3 class="hotel-title">Amara Resort & Spa</h3>
               <ul class="hotel-stars-1">
@@ -177,16 +180,16 @@
             <div class="hotel-bottom">
               <a href="" class="hotel-more">Подробнее</a>
               <a href="" class="hotel-booking">Забронировать</a>
-              <span class="hotel-raiting">Рейтинг: 8,5</span>
+              <span class="hotel-rating">Рейтинг: 8,5</span>
             </div>
           </div>
       </li>
 
-      <li class="hotel-item-2">
+      <li class="hotel-item">
         <div class="hotel-img">
           <img src="img/desert.jpg" width="135" height="90" class="hotel-image" alt="Desert Quail Inn">
         </div>
-          <div class="hotel-content hotel-content-2">
+          <div class="hotel-content">
             <div class="hotel-top">
               <h3 class="hotel-title">Desert Quail Inn</h3>
               <ul class="hotel-stars-2">
@@ -203,16 +206,16 @@
             <div class="hotel-bottom">
               <a href="" class="hotel-more">Подробнее</a>
               <a href="" class="hotel-booking">Забронировать</a>
-              <span class="hotel-raiting">Рейтинг: 8,9</span>
+              <span class="hotel-rating">Рейтинг: 8,9</span>
             </div>
           </div>
       </li>
 
-      <li class="hotel-item-3">
+      <li class="hotel-item">
         <div class="hotel-img">
           <img src="img/villas.jpg" width="135" height="90" class="hotel-image" alt="Villas At Poco Diablo">
         </div>
-          <div class="hotel-content hotel-content-3">
+          <div class="hotel-content">
             <div class="hotel-top">
               <h3 class="hotel-title">Villas At Poco Diablo</h3>
               <ul class="hotel-stars-3">
@@ -228,7 +231,7 @@
             <div class="hotel-bottom">
               <a href="" class="hotel-more">Подробнее</a>
               <a href="" class="hotel-booking">Забронировать</a>
-              <span class="hotel-raiting">Рейтинг: 9,2</span>
+              <span class="hotel-rating">Рейтинг: 9,2</span>
             </div>
           </div>
       </li>
