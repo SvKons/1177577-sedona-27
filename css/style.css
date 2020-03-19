@@ -497,7 +497,6 @@ li {
   font-style: normal;
   font-weight: bold;
   line-height: 26px;
-  outline: none;
   letter-spacing: normal;
   text-transform: uppercase;
 
@@ -684,7 +683,6 @@ li {
   height: 100%;
   background-color: #81B3D2;
   border: none;
-  outline: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -958,6 +956,17 @@ legend {
   fill: #6a6a6a;
 }
 
+.check-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.check-input:focus ~ svg {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 .sort{
   display: flex;
   align-items: center;
@@ -1056,7 +1065,6 @@ legend {
   width: 11px;
   height: 10px;
   cursor: pointer;
-  outline: none;
   background: none;
 
   padding: 0 6px 5px 0;
